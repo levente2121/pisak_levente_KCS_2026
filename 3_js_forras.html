@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Unit teszt feladat</title>
+	<script type="text/javascript">
+	//Ide jön  a feladat megoldása...
+		//1.
+console.log(kivalogatParosOtven([10, 20, 3, 5, 100, 50, 60, 53]));
+function kivalogatParosOtven(szamTomb) {
+
+    var megfeleloSzamok = [];
+
+    for(var i = 0; i < szamTomb.length; i++){
+        if(szamTomb[i] > 50 && szamTomb[i] % 2 == 0){
+            megfeleloSzamok.push(szamTomb[i]);
+        }
+    }
+
+
+    return megfeleloSzamok;
+
+}
+
+//2.
+console.log(aBetukSzamaDiv());
+function aBetukSzamaDiv(){
+    var aBetukSzama = 0;
+    var div = document.querySelector("body div").textContent.toLowerCase();
+    for(var i = 0; i < div.length; i++){
+        if(div[i] == 'a'){
+            aBetukSzama++;
+        }
+    }
+
+    return aBetukSzama;
+
+}
+
+//3.
+osszeadasFeliras("eredmeny", 2,3);
+function osszeadasFeliras(className, szam1, szam2){
+    var elem = document.getElementsByClassName(className)[0];
+
+    var p = document.createElement("p");
+
+    var elsoSzam = Number(szam1);
+    var masodikSzam = Number(szam2);
+    var osszeg = elsoSzam + masodikSzam;
+
+    p.textContent = elsoSzam + " + " + masodikSzam + " = " + osszeg;
+
+    elem.appendChild(p);
+}
+
+	
+	
+	//Idáig 
+	</script>
+	<script src="testBaseUnit.js"></script>
+</head>
+<body>
+    <div></div>
+	<hr>
+	<div id="testResult">
+	<h2>Tesztek</h2></div>
+</body>
+</html>
